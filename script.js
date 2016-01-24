@@ -72,8 +72,34 @@ function createChessTable() {
 
 }
 
+function selectCell () {
+    var elem = document.getElementById('myGame').firstElementChild;
+
+    if (target.tagName != 'TD') {
+        return;
+    }
+
+    console.log(elem);
+
+    elem.onclick = function(event) {
+        var target = event.target;
+        console.log(target);
+
+        document.getElementById('infoCell').innerText = target.textContent;
+
+        if (target.classList.contains('selected')) {
+            target.classList.remove('selected');
+        } else {
+            target.classList.add('selected');
+        }
+
+
+    }
+
+}
 
 
 window.onload = function() {
     createChessTable();
+    selectCell();
 };

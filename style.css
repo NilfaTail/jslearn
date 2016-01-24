@@ -45,4 +45,11 @@ html, body {
     color: #393939;
     text-align: right;
     vertical-align: top;
+    cursor: pointer;
+}
+
+
+#myGame table tr td.selected {
+    background: #BFBF05 !important;
+    color: #FFFFFF !important;
 }
