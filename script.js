@@ -1,5 +1,4 @@
 
-
 function createTable() {
 
     var N = prompt("Введите N: "),
@@ -34,7 +33,47 @@ function createTable() {
         }
     }
 
-    document.getElementById('message').appendChild(newTable);
+    document.getElementById('myTable').appendChild(newTable);
 
 }
 
+function createChessTable() {
+
+    var N = 8,
+        M = 8,
+        rows,
+        cols;
+
+    var chessDesk = document.createElement('table');
+    var stringArray = new Array('A', 'B', 'C', 'D', 'E', 'F', 'H', 'G');
+
+    for (var i = 0; i < N; i++) {
+        rows = document.createElement('tr');
+        chessDesk.appendChild(rows);
+
+
+        for (var j = 0; j < M; j++) {
+            cols = document.createElement('td');
+            rows.appendChild(cols);
+
+            cols.innerText = stringArray[i]+ '' + (j+1);
+
+            if (i%2) {
+                cols.style.backgroundColor = (j%2) && '#F5F5DC' || '#583434';
+                cols.style.color = (j%2) && 'black' || 'white';
+            } else {
+                cols.style.backgroundColor = (j%2) && '#583434' || '#F5F5DC';
+                cols.style.color = (j%2) && 'white' || 'black';
+            }
+        }
+    }
+
+    document.getElementById('myGame').appendChild(chessDesk);
+
+}
+
+
+
+window.onload = function() {
+    createChessTable();
+};

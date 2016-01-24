@@ -21,21 +21,28 @@ html, body {
 }
 
 #message {
-    height: 100px;
-    width: 100%;
     margin: 10px 0;
 }
 
-#message table {
+#myTable table, #myGame table {
     border-collapse: collapse;
     margin: 10px 0;
 }
 
-#message table tr td {
+#myTable table tr td, #myGame table tr td {
     border: 1px solid #393939;
     padding: 2px;
     width: 30px;
     height: 30px;
     text-align: center;
     vertical-align: middle;
+}
+
+
+#myGame table tr td {
+    width: 60px;
+    height: 60px;
+    color: #393939;
+    text-align: right;
+    vertical-align: top;
 }
