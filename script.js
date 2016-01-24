@@ -74,28 +74,25 @@ function createChessTable() {
 
 function selectCell () {
     var elem = document.getElementById('myGame').firstElementChild;
-
-    if (target.tagName != 'TD') {
-        return;
-    }
-
-    console.log(elem);
+    var selectedTd;
 
     elem.onclick = function(event) {
         var target = event.target;
-        console.log(target);
-
+        if (target.tagName != 'TD') {
+            return;
+        }
         document.getElementById('infoCell').innerText = target.textContent;
 
-        if (target.classList.contains('selected')) {
-            target.classList.remove('selected');
-        } else {
-            target.classList.add('selected');
-        }
-
-
+        highlight(target);
     }
 
+    function highlight(node) {
+        if (selectedTd) {
+            selectedTd.classList.remove('selected');
+        }
+        selectedTd = node;
+        selectedTd.classList.add('selected');
+    }
 }
 
 
