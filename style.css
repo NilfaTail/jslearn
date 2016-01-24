@@ -1,0 +1,41 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: verdana, sans-serif;
+}
+
+.wrapper {
+    background: #FFF;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    background: #667ada;
+    border: 1px solid #5A6AB7;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+#message {
+    height: 100px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+#message table {
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+#message table tr td {
+    border: 1px solid #393939;
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+}
