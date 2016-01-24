@@ -37,6 +37,13 @@ function createTable() {
 
 }
 
+/**
+ * ChessDesk
+ * */
+
+var target;
+var selectedTd;
+
 function createChessTable() {
 
     var N = 8,
@@ -72,18 +79,47 @@ function createChessTable() {
 
 }
 
-function selectCell () {
-    var elem = document.getElementById('myGame').firstElementChild;
-    var selectedTd;
+function handler(event){
+
+    var KEY_CODE = {
+        LEFT:   37,
+        UP:     38,
+        RIGHT:  39,
+        DOWN:   40
+    };
+
+    switch(event.keyCode) {
+        case KEY_CODE.LEFT:
+            console.log('Left');
+
+            break;
+        case KEY_CODE.UP:
+            console.log('Up');
+            break;
+        case KEY_CODE.RIGHT:
+            console.log('Right');
+            break;
+        case KEY_CODE.DOWN:
+            console.log('Down');
+            break;
+
+    }
+
+}
+
+function selectCell() {
+    var elem = document.getElementById('myGame').firstElementChild; // получили таблицу
 
     elem.onclick = function(event) {
-        var target = event.target;
+
+        target = event.target;
+
         if (target.tagName != 'TD') {
             return;
         }
         document.getElementById('infoCell').innerText = target.textContent;
-
         highlight(target);
+
     }
 
     function highlight(node) {
@@ -96,7 +132,15 @@ function selectCell () {
 }
 
 
+
+
 window.onload = function() {
     createChessTable();
     selectCell();
+
+
+    window.addEventListener('keydown', handler, false);
+
+
+
 };
