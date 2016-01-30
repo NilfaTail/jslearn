@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>JS, lesson 3</title>
+	
+	<script type="text/javascript" src="jquery-2.2.0.min.js"></script>
+	
+
+</head>
+
+<body>
+	
+	<h1>Задание 1</h1>
+	
+	<h1>abc</h1>
+
+	<div>
+
+		<h1>div-1</h1>
+
+		<h1>div-2</h1>
+
+	</div>
+
+	<h1>xyz</h1>
+
+	
+	<h1>Задание 2</h1>
+	
+	<form  name='demo_form'>
+
+		First name: <input type="text" name="fname"><br>
+
+		Last name: <input type="text" name="lname"><br>
+
+		<input type="submit" value="Submit">
+
+	</form>
+	
+	
+	<h1>Задание 3</h1>
+	
+	<select id="myselect">
+
+		<option value="1">Option-1</option>
+
+		<option value="2">Option-2</option>
+
+		<option value="3">Option-3</option>
+
+	</select>
+	
+	<h1>Задание 4, 5</h1>
+	
+	<ul>
+
+		<li>Html Tutorial</li>
+
+		<li>Mongodb Tutorial</li>
+
+		<li>Python Tutorial</li>
+
+	</ul>
+	
+	<div>Значение спрятанного элемента: <span class="last"></span></div>
+
+	<script>
+		// первое задание
+		$("div").children("h1").css("border", "1px solid red"); // найти всех потомков h1 в div
+		$("div h1").eq("0").text("Заголовок в div 1");
+		$("div h1").eq("1").text("Заголовок в div 2");
+		
+		//второе задание
+		$("form[name='demo_form'] input[name='fname']").val("Иванов");
+		$("form[name='demo_form'] input[name='lname']").val("Валентин");
+		
+		//третье задание
+		$("#myselect option[value='2']").attr("selected", "selected");
+		
+		//четвертое задание
+		$("ul li").eq("1").wrap("<b> </b>"); // оборачиваем в тэг
+		
+		//пятое задание
+		$(".last").text($("ul").find("li:last").text()); 
+		$("ul li:last").hide();
+		
+	</script>
+	
+</body>
+</html>
