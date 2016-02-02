@@ -1,0 +1,89 @@
+html, body {
+	margin:0;
+	padding: 0;
+}
+
+ul.h-nav-tabs {
+	padding-left: 40px;
+	margin-bottom: 0;
+}
+
+ul.h-nav-tabs li {
+	display: inline-block;
+    border: 1px solid #dadada;
+	border-bottom: 0px;
+    padding: 10px 20px;
+    margin-right: 10px;
+	cursor:pointer;
+}
+
+ul.h-nav-tabs li:last-child {
+	margin-right: 0;	
+}
+
+ul.h-nav-tabs li:hover {
+	background: #dadada;
+}
+
+ul.h-nav-tabs li.active {
+	border-color: red;
+
+	background: #dadada;
+}
+
+.h-tabs-wrap {
+	margin-left: 40px;
+    width: 500px;
+    border: 1px solid #dadada;
+    padding: 20px;
+	background: #dadada;
+
+}
+
+.h-tabs-content {
+	display: none;
+}
+
+.h-tabs-content.active{
+	display: block;
+}
+
+
+
+.v-nav .v-nav-tabs , .v-nav .v-tabs-wrap{
+	display: inline-block;
+	vertical-align: top;
+    margin: 10px 0;
+}
+
+.v-nav-tabs {
+	width: 70px;
+}
+
+.v-nav .v-tabs-wrap {
+	width: 400px;
+    background: #dadada;
+	margin-left: -4px;
+	padding: 4px;
+	min-height: 200px;
+}
+
+
+ul.v-nav-tabs li {
+	border: 1px solid #dadada;
+    border-right: 0;
+    display: block;
+    margin-bottom: 2px;
+    padding: 10px;
+}
+
+ul.v-nav-tabs li:hover, ul.v-nav-tabs li.active {
+	background: #dadada;
+}
+
+.v-tabs-wrap .v-tabs-content {
+	display:none;
+}
+.v-tabs-wrap .v-tabs-content.active {
+	display: block;
+}
