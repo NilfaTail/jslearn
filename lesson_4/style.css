@@ -48,9 +48,9 @@ ul.h-nav-tabs li.active {
 	display: block;
 }
 
+/* ------------------------------------- */
 
-
-.v-nav .v-nav-tabs , .v-nav .v-tabs-wrap{
+.v-tabs .v-nav-tabs , .v-tabs .v-tabs-wrap{
 	display: inline-block;
 	vertical-align: top;
     margin: 10px 0;
@@ -60,14 +60,13 @@ ul.h-nav-tabs li.active {
 	width: 70px;
 }
 
-.v-nav .v-tabs-wrap {
-	width: 400px;
+.v-tabs .v-tabs-wrap {
+	width: 464px;
     background: #dadada;
 	margin-left: -4px;
 	padding: 4px;
 	min-height: 200px;
 }
-
 
 ul.v-nav-tabs li {
 	border: 1px solid #dadada;
@@ -81,9 +80,11 @@ ul.v-nav-tabs li:hover, ul.v-nav-tabs li.active {
 	background: #dadada;
 }
 
-.v-tabs-wrap .v-tabs-content {
-	display:none;
-}
 .v-tabs-wrap .v-tabs-content.active {
 	display: block;
+}
+
+.v-tabs-content > * {
+    padding: 7px;
+    margin: 0;
 }
