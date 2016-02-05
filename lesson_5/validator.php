@@ -1,6 +1,8 @@
 <?php
 require "gump.class.php";
 
+print_r($_POST);
+
 $validator = new GUMP();
 
 $_POST = $validator->sanitize($_POST);
@@ -17,9 +19,12 @@ $rules = array(
 $validated = $validator->validate(
 	$_POST, $rules
 );
+
 if($validated === TRUE) {
 	die("true");
 } else {
 	die("false");
 }
+
+
 ?>
