@@ -1,8 +1,6 @@
 <?php
 require "gump.class.php";
 
-print_r($_POST);
-
 $validator = new GUMP();
 
 $_POST = $validator->sanitize($_POST);
@@ -12,7 +10,8 @@ $rules = array(
 	'password'    => 'required|max_len,100|min_len,6',
 	'email'       => 'required|valid_email',
 	'gender'      => 'required|exact_len,1',
-	'credit_card' => 'required|valid_cc',
+	//'credit_card' => 'required|valid_cc',
+	'credit_card' => 'required',
 	'bio'		  => 'required'
 );
 

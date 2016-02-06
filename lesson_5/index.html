@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	
 	<script type="text/javascript" src="jquery-2.2.0.min.js"></script>
-	<!--<script type="text/javascript" src="main.js"></script>-->
+	<script type="text/javascript" src="main.js"></script>
 
 </head>
 
@@ -19,77 +19,55 @@
 		
 		<form class="reg-groups" method="post">
 		
-			<div class="reg-group">
+			<div class="reg-group username">
 				<div><label for="username">Username: </label> </div>
 				<input type="text" size="30" name="username" value="Ivanov" placeholder="Your name" required>
+				<div class="err-msg"></div>
 			</div>
 			
-			<div class="reg-group">
+			<div class="reg-group password">
 				<div><label for="password">Password: </label></div>
 				<input type="password" size="30" name="password" value="123456qwerty" required>
+				<div class="err-msg"></div>
 			</div>
 	
-			<div class="reg-group">
+			<div class="reg-group email">
 				<div><label for="email">Email: </label></div>
 				<input type="email" size="30" name="email" value="test@test.com" placeholder="test@test.com" required>
+				<div class="err-msg"></div>
 			</div>
 
 			<div class="reg-group">
 				<div><label for="gender">Gender: </label></div>
 				<input type="radio" name="gender" value="m" checked> <span>Male</span>
 				<input type="radio" name="gender" value="f"> <span>Female</span>
+				
 			</div>
 
-			<div class="reg-group">
+			<div class="reg-group credit_card">
 				<div><label for="credit_card">Creditcard: </label></div>
-				<input type="text" size="30" name="credit_card" value="9872389-2424-234224-234" placeholder="9872389-2424-234224-234" required>
+				<input type="text" size="30" name="credit_card" value="98723892424234224234" placeholder="9872389-2424-234224-234" required>
+				<div class="err-msg"></div>
 			</div>
 
-			<div class="reg-group">
-				<div><label for="bio">About	: </label></div>
-				<textarea size="30" name="bio" value="My first AJAX" placeholder="Write something..." required></textarea>
+			<div class="reg-group bio">
+				<div><label for="bio">About: </label></div>
+				<textarea size="30" name="bio" value="" placeholder="Write something..." required></textarea>
+				<div class="err-msg"></div>
 			</div>			
 			
 			<div class="reg-group">
-					<input type="submit" value="Submit" id="dataSend">
+					<input type="submit" value="Submit!" id="dataSend">
 			</div>
 			
 		</form>
 		
 		<div class="acceptData">
-			<h3>Вы указали следующие данные:</h3>
-			
-		</div>
-		
-		
+			<h3>Результат проверки:</h3>
+			<div id="acceptData"></div>
+		</div>		
 	</div>	
 
-	<script type="text/javascript">
-		(function($) {
-			$(function() {
-				$(document).on('click', '#dataSend', function(event){
-					$.ajax({
-						url: 'validator.php',
-						dataType: 'html',
-						type: 'POST',
-						data: {
-							username: $('.reg-group input[name="username"]').val(),
-							password: $('.reg-group input[name="password"]').val(),
-							email: $('.reg-group input[name="email"]').val(),
-							gender:  $('.reg-group input[name="gender"]:checked').val(),
-							credit_card: $('.reg-group input[name="credit_card"]').val(),
-							bio: $('.reg-group textarea[name="bio"]').val()
-						},
-						success: function(data) {
-							console.log(data);
-							$('.acceptData').html();
-						}
-					});
-					event.preventDefault();
-				})
-			});
-		})(jQuery);		
-	</script>
 		
 </body>
 </html>
