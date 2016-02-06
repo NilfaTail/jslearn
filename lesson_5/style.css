@@ -17,6 +17,15 @@ h1 {
     margin: 10px;
 }
 
+.reg-groups legend {
+	text-align: left;
+	position: relative;
+	top: -20px;
+	background-color: #fff;
+	width: 137px;
+	padding: 0 4px;
+}
+
 .reg-group {
 	padding: 6px 10px;
 }
@@ -61,9 +70,17 @@ h1 {
 }
 
 div.err-msg {
-	
+	display: none;
 	color: red;
     width: 100%;
     text-align: center;
     padding-left: 10px;
+}
+
+.valid{
+	border: 1px solid green;
+}
+
+.invalid {
+	border: 1px solid red;
 }

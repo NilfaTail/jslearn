@@ -18,41 +18,41 @@
 		<h1>Registration Form</h1>
 		
 		<form class="reg-groups" method="post">
-		
+			<legend>Input your data here:</legend>
+
 			<div class="reg-group username">
 				<div><label for="username">Username: </label> </div>
-				<input type="text" size="30" name="username" value="Ivanov" placeholder="Your name" required>
+				<input type="text" name="username" id="username" value="Nilfa123" placeholder="Your name" required>
 				<div class="err-msg"></div>
 			</div>
 			
 			<div class="reg-group password">
 				<div><label for="password">Password: </label></div>
-				<input type="password" size="30" name="password" value="123456qwerty" required>
+				<input type="password" name="password" id="password"  value="password" required>
 				<div class="err-msg"></div>
 			</div>
 	
 			<div class="reg-group email">
 				<div><label for="email">Email: </label></div>
-				<input type="email" size="30" name="email" value="test@test.com" placeholder="test@test.com" required>
+				<input type="email" name="email" id="email" value="test@test.com" placeholder="test@test.com" required>
 				<div class="err-msg"></div>
 			</div>
 
 			<div class="reg-group">
-				<div><label for="gender">Gender: </label></div>
-				<input type="radio" name="gender" value="m" checked> <span>Male</span>
-				<input type="radio" name="gender" value="f"> <span>Female</span>
-				
+				<div><label>Gender: </label></div>
+				<label><input type="radio" name="gender" value="m" checked> Male</label>
+				<label><input type="radio" name="gender" value="f"> Female</label>
 			</div>
 
 			<div class="reg-group credit_card">
 				<div><label for="credit_card">Creditcard: </label></div>
-				<input type="text" size="30" name="credit_card" value="98723892424234224234" placeholder="9872389-2424-234224-234" required>
+				<input type="text" name="credit_card" id="credit_card" value="98723892424234224234" placeholder="98723892424234224234" required>
 				<div class="err-msg"></div>
 			</div>
 
 			<div class="reg-group bio">
 				<div><label for="bio">About: </label></div>
-				<textarea size="30" name="bio" value="" placeholder="Write something..." required></textarea>
+				<textarea name="bio" id="bio" placeholder="Write something..." required></textarea>
 				<div class="err-msg"></div>
 			</div>			
 			
